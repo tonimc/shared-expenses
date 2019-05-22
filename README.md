@@ -1,5 +1,7 @@
 # shared-expenses
 
+This is a simple project to show how Vue works.
+
 ## Project setup
 ```
 yarn install
