@@ -1,0 +1,106 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Visita turística a Ourense",
+      "people": [
+        {
+          "name": {
+            "first": "chloe",
+            "last": "wood"
+          },
+          "email": "chloe.wood@example.com",
+          "phone": "(530)-649-2907",
+          "picture": "https://randomuser.me/api/portraits/thumb/women/37.jpg",
+          "amount": 300
+        },
+        {
+          "name": {
+            "first": "vinjar",
+            "last": "wiken"
+          },
+          "email": "vinjar.wiken@example.com",
+          "phone": "62127678",
+          "picture": "https://randomuser.me/api/portraits/thumb/men/77.jpg",
+          "amount": 100
+        },
+        {
+          "name": {
+            "first": "marin",
+            "last": "dumont"
+          },
+          "email": "marin.dumont@example.com",
+          "phone": "02-90-32-61-03",
+          "picture": "https://randomuser.me/api/portraits/thumb/men/76.jpg",
+          "amount": 200
+        },
+        {
+          "name": {
+            "first": "nelia",
+            "last": "semb"
+          },
+          "email": "nelia.semb@example.com",
+          "phone": "21465130",
+          "picture": "https://randomuser.me/api/portraits/thumb/women/73.jpg",
+          "amount": 50
+        },
+        {
+          "name": {
+            "first": "irma",
+            "last": "gerard"
+          },
+          "email": "irma.gerard@example.com",
+          "phone": "(973)-965-1765",
+          "picture": "https://randomuser.me/api/portraits/thumb/women/69.jpg",
+          "amount": 30
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Catamarán por la Ribeira Sacra",
+      "people": [
+        {
+          "name": {
+            "first": "vinjar",
+            "last": "wiken"
+          },
+          "email": "vinjar.wiken@example.com",
+          "phone": "62127678",
+          "picture": "https://randomuser.me/api/portraits/thumb/men/77.jpg",
+          "amount": 0
+        },
+        {
+          "name": {
+            "first": "marin",
+            "last": "dumont"
+          },
+          "email": "marin.dumont@example.com",
+          "phone": "02-90-32-61-03",
+          "picture": "https://randomuser.me/api/portraits/thumb/men/76.jpg",
+          "amount": 12
+        },
+        {
+          "name": {
+            "first": "nelia",
+            "last": "semb"
+          },
+          "email": "nelia.semb@example.com",
+          "phone": "21465130",
+          "picture": "https://randomuser.me/api/portraits/thumb/women/73.jpg",
+          "amount": 32
+        },
+        {
+          "name": {
+            "first": "irma",
+            "last": "gerard"
+          },
+          "email": "irma.gerard@example.com",
+          "phone": "(973)-965-1765",
+          "picture": "https://randomuser.me/api/portraits/thumb/women/69.jpg",
+          "amount": 123
+        }
+      ]
+    }
+  ]
+}
