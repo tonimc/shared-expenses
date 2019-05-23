@@ -2,6 +2,8 @@
 
 This is a simple project to show how Vue works.
 
+![Shared expenses manager](https://raw.githubusercontent.com/tonimc/shared-expenses/master/repo-assets/shared-expenses.gif)
+
 ## Project setup
 ```
 yarn install
