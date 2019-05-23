@@ -6,20 +6,21 @@
     <div class="card">
       <div class="summary">
         <h2>{{ event.name }}</h2>
-        <h3>Total: {{ totalAmount }} &#8364;</h3>
-        <h3>Each person has to pay {{ dividedAmount }} &#8364;</h3>
+        <h3>Total: {{ totalAmount.toFixed(2) }} &#8364;</h3>
+        <h3>Each person has to pay {{ dividedAmount.toFixed(2) }} &#8364;</h3>
       </div>
       <div class="list">
         <div class="header-list">
           <h4>Name</h4>
           <h4>Payed</h4>
-          <h4 :class="debtClass">Has to...</h4>
+          <h4>Has to...</h4>
         </div>
         <PersonData
           v-for="person in event.people"
           :key="person.email"
           :person="person"
           :amount="dividedAmount"
+          @person-updated="updatePerson"
         />
       </div>
     </div>
@@ -48,13 +49,24 @@ export default {
     dividedAmount() {
       return this.totalAmount / this.event.people.length;
     }
+  },
+  methods: {
+    updatePerson(updated) {
+      const index = this.event.people.findIndex(
+        person => person.email === updated.email
+      );
+      if (index >= 0) {
+        const event = { ...this.event };
+        event.people.splice(index, 1, updated);
+        this.$emit('event-updated', event);
+      }
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .event {
-
   .card {
     border: 1px solid #4caf50;
     background-color: #e8f5e9;

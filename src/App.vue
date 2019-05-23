@@ -2,7 +2,10 @@
   <div id="app">
     <div class="navbar">
       <h1>Share your expenses</h1>
-      <img alt="Vue logo" src="./assets/logo.png" />
+      <div>
+        <img alt="Vue logo" src="./assets/logo.png" />
+        <img alt="JSOurense logo" src="./assets/logo.jpg" />
+      </div>
     </div>
     <SharedExpenses />
   </div>
@@ -38,8 +41,9 @@ export default {
     h1 {
       font-size: 2rem;
     }
-    > img {
+    img {
       height: 40px;
+      margin-left: 1rem;
     }
   }
 }

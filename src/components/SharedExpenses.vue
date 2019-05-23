@@ -16,6 +16,8 @@
         v-else
         :event="event"
         @close-event="clearEvent"
+        @event-updated="updateEvent"
+        @event-saved="saveEvent"
       ></EventDetails>
     </div>
   </div>
@@ -67,7 +69,7 @@ export default {
       setTimeout(async () => {
         this.events = (await eventsRepository.all()).data;
         this.isLoading = false;
-      }, 2000);
+      }, 1000);
     },
     selectedEvent(event) {
       this.event = event;
@@ -77,9 +79,14 @@ export default {
     },
     updateEvent(updated) {
       const index = this.events.findIndex(event => event.id === updated.id);
-      if (index) {
+      if (index >= 0) {
         this.events.splice(index, 1, updated);
-        eventsRepository.update(updated);
+      }
+    },
+    saveEvent(saved) {
+      const index = this.events.findIndex(event => event.id === saved.id);
+      if (index >= 0) {
+        eventsRepository.update(saved);
       }
     }
   }
