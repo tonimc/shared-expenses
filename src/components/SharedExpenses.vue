@@ -12,7 +12,11 @@
         :events="events"
         @selected-event="selectedEvent"
       ></EventsList>
-      <EventDetails v-else :event="event"></EventDetails>
+      <EventDetails
+        v-else
+        :event="event"
+        @close-event="clearEvent"
+      ></EventDetails>
     </div>
   </div>
 </template>
@@ -67,6 +71,9 @@ export default {
     },
     selectedEvent(event) {
       this.event = event;
+    },
+    clearEvent() {
+      this.event = null;
     },
     updateEvent(updated) {
       const index = this.events.findIndex(event => event.id === updated.id);
