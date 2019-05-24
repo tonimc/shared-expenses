@@ -12,7 +12,7 @@
           "email": "chloe.wood@example.com",
           "phone": "(530)-649-2907",
           "picture": "https://randomuser.me/api/portraits/thumb/women/37.jpg",
-          "amount": 300
+          "amount": 432
         },
         {
           "name": {
@@ -62,13 +62,13 @@
       "people": [
         {
           "name": {
-            "first": "vinjar",
-            "last": "wiken"
+            "first": "irma",
+            "last": "gerard"
           },
-          "email": "vinjar.wiken@example.com",
-          "phone": "62127678",
-          "picture": "https://randomuser.me/api/portraits/thumb/men/77.jpg",
-          "amount": 342
+          "email": "irma.gerard@example.com",
+          "phone": "(973)-965-1765",
+          "picture": "https://randomuser.me/api/portraits/thumb/women/69.jpg",
+          "amount": 123
         },
         {
           "name": {
@@ -92,13 +92,13 @@
         },
         {
           "name": {
-            "first": "irma",
-            "last": "gerard"
+            "first": "vinjar",
+            "last": "wiken"
           },
-          "email": "irma.gerard@example.com",
-          "phone": "(973)-965-1765",
-          "picture": "https://randomuser.me/api/portraits/thumb/women/69.jpg",
-          "amount": 123
+          "email": "vinjar.wiken@example.com",
+          "phone": "62127678",
+          "picture": "https://randomuser.me/api/portraits/thumb/men/77.jpg",
+          "amount": 342
         }
       ]
     }

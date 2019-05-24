@@ -4,12 +4,7 @@
     <h4>{{ fullName }}</h4>
     <h4>
       <span v-if="!editable">{{ person.amount.toFixed(2) }} &#8364;</span>
-      <input
-        v-else
-        :value="person.amount"
-        type="number"
-        @input="amountChanged"
-      />
+      <input v-else v-model="budget" type="number" />
     </h4>
     <h4 :class="debtClass">{{ debtAction }} {{ Math.abs(debt) }} &#8364;</h4>
     <img
@@ -22,7 +17,7 @@
       v-if="editable"
       src="../assets/save.svg"
       class="icon"
-      @click="editable = false"
+      @click="savePerson"
     />
   </div>
 </template>
@@ -61,14 +56,25 @@ export default {
         Receive: 'debtClass--green',
         '': 'debtClass--blue'
       }[this.debtAction];
+    },
+    budget: {
+      get() {
+        return this.person.amount;
+      },
+      set(amount) {
+        const person = {
+          ...this.person,
+          amount: Number(amount)
+        };
+        this.$emit('person-updated', person);
+      }
     }
   },
   methods: {
-    amountChanged(event) {
-      const amount = event.target.value;
+    savePerson() {
+      this.editable = false;
       const person = { ...this.person };
-      person.amount = Number(amount);
-      this.$emit('person-updated', person);
+      this.$emit('person-saved', person);
     }
   }
 };

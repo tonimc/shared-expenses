@@ -21,6 +21,7 @@
           :person="person"
           :amount="dividedAmount"
           @person-updated="updatePerson"
+          @person-saved="savePerson"
         />
       </div>
     </div>
@@ -51,14 +52,27 @@ export default {
     }
   },
   methods: {
-    updatePerson(updated) {
+    editEvent(edited) {
       const index = this.event.people.findIndex(
-        person => person.email === updated.email
+        person => person.email === edited.email
       );
       if (index >= 0) {
         const event = { ...this.event };
-        event.people.splice(index, 1, updated);
+        event.people.splice(index, 1, edited);
+        return event;
+      }
+      return null;
+    },
+    updatePerson(person) {
+      const event = this.editEvent(person);
+      if (event) {
         this.$emit('event-updated', event);
+      }
+    },
+    savePerson(person) {
+      const event = this.editEvent(person);
+      if (event) {
+        this.$emit('event-saved', event);
       }
     }
   }
